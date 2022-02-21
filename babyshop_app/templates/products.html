@@ -1,0 +1,38 @@
+{% extends 'partoftemp/_dashboard.html' %}
+{% block content %}
+      <div class="row ml-2 mt-3">
+        <div class="col-2">
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+              Kategoriler
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+            <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+            <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+          </div>
+          
+        </div>
+        <div class="col-10">
+          
+          <div class="row">
+            {% for product in products %}
+            <div class="card" style="width: 18rem;">
+              <img src="{{product.image.url}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">{{product.describtion | truncatechars:80}}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          
+
+        </div>
+        
+      </div>
+      
+      
+</body>
+</html>
+{% endblock %}
