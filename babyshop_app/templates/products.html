@@ -3,25 +3,27 @@
       <div class="row ml-2 mt-3">
         <div class="col-2">
           <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+            <a href="http://127.0.0.1:8000/" class="list-group-item list-group-item-action active" aria-current="true">
               Kategoriler
             </a>
             {% for category in categories %}
-            <a href="#" class="list-group-item list-group-item-action">{{category.name}}</a>
+            <a href="{% url 'products_by_category' category.slug %}" class="list-group-item list-group-item-action">{{category.name}}</a>
             {% endfor %}
           </div>
           
         </div>
         <div class="col-10">
           
+        
           <div class="row">
             {% for product in products %}
-            <div class="card" style="width: 18rem;">
-              <img src="{{product.image.url}}" class="card-img-top" alt="...">
+            <div class="card  mt-3" style="width: 18rem;">
+              <img src="{{product.image.url}}" class="card-img-top" width="300" height="230">
               <div class="card-body">
-                <h5 class="card-title">{{product.name}}</h5>
+                <h5 class="card-title"> <a href="{% url 'product_detail' product.category.slug product.id %}">{{product.name}}</a></h5>
+                <div class="mb-1 text-muted">{{product.price}} &#8378;</div>
                 <p class="card-text">{{product.describtion | truncatechars:80}}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="{% url 'product_detail' product.category.slug product.id %}" class="btn btn-primary">Detayına Git</a>
               </div>
             </div>
             {% endfor %}

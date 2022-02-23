@@ -1,0 +1,33 @@
+{% extends 'partoftemp/_dashboard.html' %}
+{% block content %}
+
+    <div class="col-md-12 mt-4">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <h3 class="mb-0">{{product.name}}</h3>
+          <div class="mb-1 text-muted">{{product.price}} &#8378;</div>
+          <p class="card-text mb-auto">{{product.describtion}}</p>
+          <div class="btn btn-primary btn-center">Satın Al</div>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="{{product.image.url}}"  width="400" height="400" alt="">
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {% for product in products %}
+      <div class="card" style="width: 18rem;">
+        <img src="{{product.image.url}}" class="card-img-top" width="300" height="230">
+        <div class="card-body">
+          <h5 class="card-title"><a href="{% url 'product_detail' product.category.slug product.id %}">{{product.name}}</a></h5>
+          <div class="mb-1 text-muted">{{product.price}} &#8378;</div>
+          <p class="card-text">{{product.describtion | truncatechars:80}}</p>
+          <a href="{% url 'product_detail' product.category.slug product.id %}" class="btn btn-primary">Detayına Git</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+
+{% endblock %}
