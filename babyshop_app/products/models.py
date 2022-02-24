@@ -19,7 +19,7 @@ class Category(models.Model):
 
 class Product(models.Model):
     name=models.CharField(max_length=80)
-    describtion=models.TextField()
+    description=models.TextField()
     image=models.ImageField(upload_to="products/%Y/%m/%d/",default="products/broken-1.png")
     date=models.DateField(auto_now=True)
     price=models.DecimalField(max_digits=6,decimal_places=2)

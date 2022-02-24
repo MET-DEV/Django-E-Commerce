@@ -6,7 +6,7 @@
         <div class="col p-4 d-flex flex-column position-static">
           <h3 class="mb-0">{{product.name}}</h3>
           <div class="mb-1 text-muted">{{product.price}} &#8378;</div>
-          <p class="card-text mb-auto">{{product.describtion}}</p>
+          <p class="card-text mb-auto">{{product.description}}</p>
           <div class="btn btn-primary btn-center">Satın Al</div>
         </div>
         <div class="col-auto d-none d-lg-block">
@@ -22,7 +22,7 @@
         <div class="card-body">
           <h5 class="card-title"><a href="{% url 'product_detail' product.category.slug product.id %}">{{product.name}}</a></h5>
           <div class="mb-1 text-muted">{{product.price}} &#8378;</div>
-          <p class="card-text">{{product.describtion | truncatechars:80}}</p>
+          <p class="card-text">{{product.description | truncatechars:80}}</p>
           <a href="{% url 'product_detail' product.category.slug product.id %}" class="btn btn-primary">Detayına Git</a>
         </div>
       </div>
