@@ -1,0 +1,27 @@
+
+{% extends 'partoftemp/_dashboard.html' %}
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+    {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{message.tad}}">
+            {{message}}
+        </div>
+        {% endfor %}
+    {% endif %}
+    <div class="container content-center mt-4">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      {{form.username}}
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      {{form.password}}
+    </div>
+
+    <input type="submit" value="Giriş Yap" class="btn btn-primary">
+    </div>
+  </form>
+  {% endblock %}

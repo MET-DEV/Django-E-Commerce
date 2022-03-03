@@ -1,5 +1,35 @@
 {% extends 'partoftemp/_dashboard.html' %}
 {% block content %}
 
-  
+<form method="POST">
+    {% csrf_token %}
+    <div class="container content-center mt-4">
+    <div class="mb-3">
+      <label class="form-label">Ad</label>
+      {{form.first_name}}
+    </div>
+    <div class="mb-3">
+      <label  class="form-label">Soyad</label>
+      {{form.last_name}}
+    </div>
+    <div class="mb-3">
+        <label  class="form-label">Kullanıcı Adı</label>
+        {{form.username}}
+    </div>
+    <div class="mb-3">
+        <label  class="form-label">Email</label>
+        {{form.email}}
+    </div>
+    <div class="mb-3">
+        <label  class="form-label">Parola</label>
+        {{form.password1}}
+    </div>
+    <div class="mb-3">
+        <label  class="form-label">Tekrar Parola</label>
+        {{form.password2}}
+    </div>
+
+    <input type="submit" value="Kayıt Ol" class="btn btn-primary">
+    </div>
+  </form>
 {% endblock %}
