@@ -7,7 +7,20 @@
 
 ### Photos
 
-##### Home Page
-![capture_20220227170842486](https://user-images.githubusercontent.com/72195347/155885919-e8f73417-c6b3-46ca-9598-f109463838eb.jpg)
+##### Home Page with login
+<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323080815407.jpg"></img>
+##### Home Page with filter
+<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323080840305.jpg"></img>
 ##### Product Detail Page
-![capture_20220227170930813](https://user-images.githubusercontent.com/72195347/155885947-1c2365b8-c07c-425c-a95a-902bd5510da2.jpg)
+<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323080934541.jpg"></img>
+
+##### Home Page with no login
+<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323080953570.jpg"></img>
+
+
+##### Register Page
+<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323081016022.jpg"></img>
+
+
+##### Login Page
+<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323081044867.jpg"></img>
